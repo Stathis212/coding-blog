@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { HomeComponent } from './feature/home/home.component';
+import { HomeComponent } from './pages/home/home.component';
 
 const routes: Routes = [
   {
@@ -16,19 +16,19 @@ const routes: Routes = [
   },
   {
     path: 'admin',
-    loadChildren: () => import('./feature/admin/admin.module').then(m => m.AdminModule)
+    loadChildren: () => import('./pages/admin/admin.module').then(m => m.AdminModule)
   },
   {
     path: 'auth',
-    loadChildren: () => import('./feature/auth/auth.module').then(m => m.AuthModule)
+    loadChildren: () => import('./pages/auth/auth.module').then(m => m.AuthModule)
   },
   {
     path: 'category',
-    loadChildren: () => import('./feature/category/category.module').then(m => m.CategoryModule)
+    loadChildren: () => import('./pages/category/category.module').then(m => m.CategoryModule)
   },
   {
     path: 'post',
-    loadChildren: () => import('./feature/post/post.module').then(m => m.PostModule)
+    loadChildren: () => import('./pages/post/post.module').then(m => m.PostModule)
   }
 ];
 
